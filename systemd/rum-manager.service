@@ -1,0 +1,11 @@
+[Unit]
+Description = rum manager
+After=network.target
+Requires=network.target
+
+[Service]
+Type=simple
+ExecStart = /usr/bin/rum manager -c /etc/rum/manager.conf --with-systemd
+
+[Install]
+WantedBy=multi-user.target
